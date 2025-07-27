@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope); 
+  --font-bebas: var(--font-bebas); 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +22,52 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+.outline-text {
+  -webkit-text-stroke: 1px #03839E;
+  color: transparent;
+}
+
+.turquoise-text {
+  -webkit-text-stroke: 1px #03839E; 
+  color: #03839E; 
+}
+
+.after-icon {
+  position: relative;
+}
+
+.after-icon::after {
+  content: url('/images/Rectangle.svg');
+  position: absolute;
+  left: 72%; 
+  top: 48%;
+  margin-left: 8px;
+}
+
+.after-icon-second {
+  position: relative;
+}
+
+.after-icon-second::after {
+  content: url('/images/Rectangle.svg');
+  position: absolute;
+  left: 26%; 
+  top: 73%;
+  margin-left: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .after-icon-second::after {
+    top: 78%;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .after-icon-second::after {
+    top: 73%;
+  }
 }
