@@ -3,7 +3,7 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <section id='features' className='relative flex flex-col min-h-[50vw] 2xl:mb-10 md:mb-10 sm:mb-6 max-sm:mb-10 lg:mt-0 md:mt-20 max-sm:pt-12 '>
+    <section id='features' className='relative flex flex-col min-h-[50vw] 2xl:mb-10 md:mb-20 sm:mb-6 max-sm:mb-10 lg:mt-0 md:mt-20 max-sm:pt-12 '>
       <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-8 lg:gap-y-2 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 2xl:mt-[70px] lg:mt-[100px] lg:pr-[134px] lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] sm:pr-[34px] max-sm:pl-[34px] max-sm:pr-[34px] md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:mx-auto max-sm:justify-center max-sm:w-full max-sm:px-4 '>
         <div className='font-bebas md:text-[58px] sm:text-[56px] max-sm:text-[56px] flex tracking-[0.15em] md:w-[800px] lg:mb-12 md:mb-10.5 sm:mb-6.5 max-sm:mb-4 '>
           <p>
