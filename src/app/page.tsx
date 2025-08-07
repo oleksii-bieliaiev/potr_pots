@@ -4,6 +4,7 @@ import ForWhom from "./components/ForWhom";
 import ForWhomSecond from "./components/ForWhomSecond";
 import Features from "./components/Features";
 import Team from "./components/Team";
+import Materials from "./components/Materials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ForWhomSecond/>
       <Features />
       <Team />
+      <Materials />
     </main>
   );
 }
