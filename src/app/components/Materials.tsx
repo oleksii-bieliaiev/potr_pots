@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import React from 'react'
+import ToggleBox from './ToggleBottom'
 
 const Materials = () => {
   return (
@@ -12,10 +14,10 @@ const Materials = () => {
       <div className='flex font-sans flex-col absolute w-[470px]  2xl:top-[400px] lg:right-[134px] lg:top-[350px] text-[#4F4F4F]'>
         <p className='text-[20px] pb-4 font-bold'>Environmentally friendly</p>
         <p className="z-10 max-w-3xl md:text-[16px] leading-[1.5] ">
-           All materials used in our pots are made from 100% recycled materials and are 100% recyclable at the end of life (should you ever choose to get rid of your POTR!). All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.
-          </p>
+          All materials used in our pots are made from 100% recycled materials and are 100% recyclable at the end of life (should you ever choose to get rid of your POTR!). All materials have been sourced from within Europe to reduce our carbon footprint when transporting the raw materials, and all manufacturing is carried out in the UK.
+        </p>
       </div>
-      
+
       <div className='bg-cover bg-center min-h-[120vh] bg-no-repeat' style={{
         backgroundImage: "url('/images/Hero.png')",
         WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #F8F8F8 7%)",
@@ -25,6 +27,7 @@ const Materials = () => {
 
         </div>
       </div>
+      <ToggleBox />
     </section >
   )
 }
