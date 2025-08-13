@@ -7,7 +7,7 @@ export default function ToggleBox() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute bottom-35 left-35">
+    <div className="absolute bottom-20 left-65">
       {/* Кнопка */}
       <button onClick={() => setOpen(!open)}>
         <Image
@@ -22,7 +22,7 @@ export default function ToggleBox() {
       {/* Плашка появляется при open === true */}
       {open && (
         <div
-          className="mt-2 flex translate-y-[-8rem] items-center justify-center text-center px-4 z-10"
+          className="mt-2 absolute flex bottom-22 left-[-7rem] items-center justify-center text-center px-4 z-10"
           style={{
             width: "303px",
             height: "237px",
