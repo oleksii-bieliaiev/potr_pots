@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import ToggleBox from './ToggleBottom'
+import ToggleBottom_1 from './ToggleBottom_1'
+import ToggleBottom_2 from './ToggleBottom_2'
+import ToggleBottom_3 from './ToggleBottom_3'
+import ToggleBottom_4 from './ToggleBottom_4'
+import ToggleBottom_5 from './ToggleBottom_5'
 
 const Materials = () => {
   return (
@@ -27,7 +31,12 @@ const Materials = () => {
 
         </div>
       </div>
-      <ToggleBox />
+      <ToggleBottom_1 />
+      <ToggleBottom_2 />
+      <ToggleBottom_3 />
+      <ToggleBottom_4 />
+      <ToggleBottom_5 />
+
     </section >
   )
 }
