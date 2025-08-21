@@ -21,7 +21,7 @@ export default function ToggleBox_4() {
 
       {open && (
         <div
-          className="mt-2 absolute flex bottom-18 z-50 left-[-7rem] items-center justify-center text-center px-4 z-10"
+          className="mt-2 absolute flex bottom-18 z-50 left-[-7rem] items-center justify-center text-center px-4"
           style={{
             width: "303px",
             height: "auto",
