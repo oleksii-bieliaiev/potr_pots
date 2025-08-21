@@ -14,7 +14,7 @@ const Materials = () => {
       id='materials'
       className='relative flex flex-col lg:min-h-auto md:min-h-auto 2xl:mb-0 lg:mb-0 md:mb-0 sm:mb-6 max-sm:mb-10 2xl:mt-15 lg:mt-10'
     >
-      <div className='font-bebas z-50 2xl:translate-y-[8rem] lg:translate-y-[12rem] 2xl:pt-25 lg:pt-0 lg:text-[138.81px] md:text-[80px] block text-[#03839E] leading-[1.2] tracking-[0.10em] lg:pr-0 lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] sm:pr-[34px] md:w-[90vw] sm:w-[80vw] max-sm:w-[80vw] lg:mb-8 md:mb-40 sm:mb-6.5 max-sm:mb-4 max-sm:ml-[34px] max-sm:mr-[34px] '>
+      <div className='font-bebas z-50 2xl:translate-y-[8rem] lg:translate-y-[12rem] 2xl:pt-25 lg:pt-0  lg:text-[138.81px] md:text-[80px] block text-[#03839E] leading-[1.2] tracking-[0.10em] lg:pr-0 lg:pl-[134px] md:pl-[34px] sm:pl-[34px] sm:pr-[34px] md:w-[90vw] sm:w-[80vw] max-sm:w-[80vw] lg:mb-15 md:mb-10 sm:mb-6.5 max-sm:mb-4 max-sm:ml-[34px] max-sm:mr-[34px] '>
         Materials and <br></br>Features
       </div>
       <div className='flex font-sans flex-col absolute lg:w-[470px] md:w-[340px] 2xl:top-[400px] lg:right-[134px] lg:top-[350px] md:right-[34px] md:top-[150px] text-[#4F4F4F]'>
@@ -24,11 +24,8 @@ const Materials = () => {
         </p>
       </div>
 
-      <div className={`${styles['hero-bg']}`}>
-        <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-8 lg:gap-y-2 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 2xl:mt-[70px] lg:mt-[100px] md:mt-[100px] lg:pr-[134px] lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] sm:pr-[34px] md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:mx-auto max-sm:justify-center max-sm:w-full '>
+      <div className={`${styles['hero-bg']}`} />
 
-        </div>
-      </div>
       <ToggleBottom_1 />
       <ToggleBottom_2 />
       <ToggleBottom_3 />

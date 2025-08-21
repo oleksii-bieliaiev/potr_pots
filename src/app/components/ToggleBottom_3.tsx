@@ -7,7 +7,7 @@ export default function ToggleBox_3() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute 2xl:bottom-34 2xl:left-230 lg:bottom-34 lg:left-190 ">
+    <div className="absolute 2xl:bottom-34 2xl:left-230 lg:bottom-34 lg:left-190 md:bottom-34 md:left-100 ">
 
       <button onClick={() => setOpen(!open)}>
         <Image
@@ -15,13 +15,13 @@ export default function ToggleBox_3() {
           alt="toggle"
           width={51}
           height={51}
-          className="object-cover relative z-50 cursor-pointer"
+          className="object-cover relative  cursor-pointer"
         />
       </button>
 
       {open && (
         <div
-          className="mt-2 absolute flex 2xl:bottom-[-3rem] lg:bottom-[-3rem] lg:left-[4rem] items-center justify-center text-center px-4 z-10"
+          className="mt-2 absolute flex 2xl:bottom-[-3rem] z-50 lg:bottom-[-3rem] lg:left-[4rem]  md:bottom-[4rem] md:left-[-4rem] items-center justify-center text-center px-4 z-10"
           style={{
             width: "303px",
             height: "auto",

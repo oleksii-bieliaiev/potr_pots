@@ -1,5 +1,6 @@
 .hero-bg {
   width: 100vw;
+  z-index: 0;
   background-image: url('/images/Hero.png');
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #F8F8F8 7%);
   mask-image: linear-gradient(to bottom, transparent 0%, #F8F8F8 7%);
@@ -11,11 +12,15 @@
 
 @media (max-width: 1024px) { /* md */
   .hero-bg {
-    background-size: contain;  /* Вместо cover */
+    background-image: url('/images/hero_tab.png');
+    background-size: 100vw;  /* Вместо cover */
     background-repeat: no-repeat;
-    background-position: top center; /* или center center, чтобы правильно показать верх блока */
+    background-position: center ; /* или center center, чтобы правильно показать верх блока */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #F8F8F8 20%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #F8F8F8 20%);
+    aspect-ratio: 16 / 9;
     width: 100vw;
-    min-height: 120vh; /* или auto, если высота должна подстраиваться под картинку */
+    min-height: 500px;
     
   }
 }

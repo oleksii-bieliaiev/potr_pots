@@ -7,7 +7,7 @@ export default function ToggleBox_1() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute bottom-24 left-40 ">
+    <div className="absolute lg:bottom-24 lg:left-40 md:bottom-14 md:left-30">
 
       <button onClick={() => setOpen(!open)}>
         <Image
@@ -21,7 +21,7 @@ export default function ToggleBox_1() {
 
       {open && (
         <div
-          className="mt-2 absolute flex bottom-18 left-[-7rem] items-center justify-center text-center px-4 z-10"
+          className="mt-2 absolute flex bottom-18 left-[-7rem] items-center justify-center text-center px-4 z-50"
           style={{
             width: "303px",
             height: "auto",

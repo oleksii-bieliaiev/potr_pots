@@ -15,13 +15,13 @@ export default function ToggleBox_4() {
           alt="toggle"
           width={51}
           height={51}
-          className="object-cover relative z-50 cursor-pointer"
+          className="object-cover relative  cursor-pointer"
         />
       </button>
 
       {open && (
         <div
-          className="mt-2 absolute flex bottom-18 left-[-7rem] items-center justify-center text-center px-4 z-10"
+          className="mt-2 absolute flex bottom-18 z-50 left-[-7rem] items-center justify-center text-center px-4 z-10"
           style={{
             width: "303px",
             height: "auto",
