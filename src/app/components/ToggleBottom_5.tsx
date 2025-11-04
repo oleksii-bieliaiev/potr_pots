@@ -7,7 +7,7 @@ export default function ToggleBox_5() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute 2xl:bottom-14 2xl:left-160 lg:bottom-14 lg:left-130 md:bottom-14 md:right-40">
+    <div className="absolute 2xl:bottom-14 2xl:left-160 lg:bottom-14 lg:left-130 md:bottom-14 md:right-40 max-sm:hidden">
 
       <button onClick={() => setOpen(!open)}>
         <Image
