@@ -7,7 +7,7 @@ export default function ToggleBox_4() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="absolute bottom-74 right-50 max-sm:hidden">
+    <div className="md:block sm:hidden absolute bottom-74 right-50 max-sm:hidden">
 
       <button onClick={() => setOpen(!open)}>
         <Image

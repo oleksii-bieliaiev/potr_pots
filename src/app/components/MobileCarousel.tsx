@@ -22,7 +22,7 @@ const MobileCarousel = () => {
   }, []);
 
   return (
-    <div className="max-sm:flex hidden absolute bottom-0 left-0 w-full translate-y-[12rem] h-63 z-50 items-center justify-center">
+    <div className="md:hidden sm:flex max-sm:flex hidden absolute bottom-0 left-0 w-full sm:translate-y-[6rem] max-sm:translate-y-[12rem] sm:h-43 max-sm:h-63 z-50 items-center justify-center">
       <div className="relative w-[90%] mx-auto h-full flex flex-col items-center justify-start pt-7 px-11 bg-black/40 backdrop-blur-[34px] text-[#F8F8F8] ">
         <p className="text-start text-base leading-[1.5] tracking-0 mb-4 font-sans">
           {mobileTexts[current]}

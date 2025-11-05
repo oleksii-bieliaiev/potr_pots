@@ -5,6 +5,7 @@ import ForWhomSecond from "./components/ForWhomSecond";
 import Features from "./components/Features";
 import Team from "./components/Team";
 import Materials from "./components/Materials";
+import Sizes from "./components/Sizes";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Features />
       <Team />
       <Materials />
+      <Sizes />
     </main>
   );
 }
