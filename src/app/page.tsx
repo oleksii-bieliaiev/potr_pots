@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import Team from "./components/Team";
 import Materials from "./components/Materials";
 import Sizes from "./components/Sizes";
+import SecondOrder from "./components/SecondOrder";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Team />
       <Materials />
       <Sizes />
+      <SecondOrder />
     </main>
   );
 }
