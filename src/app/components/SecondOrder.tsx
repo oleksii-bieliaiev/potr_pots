@@ -13,24 +13,24 @@ const SecondOrder = () => {
               alt="pot title"
               width={663}
               height={460}
-              className='object-cover md:mb-7.5 max-sm:mb-6'
+              className='object-cover 2xl:w-[40vw] md:mb-7.5 max-sm:mb-6'
             />
           </div>
 
         </div>
 
 
-        <div className="relative mt-[186px] lg:col-start-7 lg:col-span-3 md:col-start-1 md:col-span-2 sm:col-start-1 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 md:block md:mb-0 sm:mb-12 max-sm:mb-4">
+        <div className="relative 2xl:mt-46 mt-32 lg:col-start-7 lg:col-span-3 md:col-start-1 md:col-span-2 sm:col-start-1 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 md:block md:mb-0 sm:mb-12 max-sm:mb-4">
           <div className='flex w-[290px] gap-2.5 items-start mb-10'>
             <Image
               src="/images/Dot.svg"
               alt="pot title"
               width={7}
               height={7}
-              className='object-cover lg:w-[8px] lg:h-[8px] mt-7'
+              className='object-cover lg:w-[8px] lg:h-[8px] mt-6'
             />
             <div>
-              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] text-[36px]">
+              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] 2xl:text-[36px] text-[32px]">
                 Easy assembly
               </p>
               <p className="font-sans text-[#4F4F4F] leading-[1.5] text-base">
@@ -50,7 +50,7 @@ const SecondOrder = () => {
               className='object-cover lg:w-[8px] lg:h-[8px] mt-6'
             />
             <div>
-              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] text-[36px]">
+              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] 2xl:text-[36px] text-[32px]">
                 Self-watering
               </p>
               <p className="font-sans text-[#4F4F4F] leading-[1.5] text-base">
@@ -65,10 +65,21 @@ const SecondOrder = () => {
             </button>
           </div>
 
+          <div className='items-end justify-end flex w-[490px] gap-2.5 mt-12'>
+            <div>
+              <p className="mb-2.5 font-bebas text-[#EB5757] tracking-[0.155em] leading-[150%] text-[36px]">
+                50% off
+              </p>
+              <p className="font-bebas text-[#03839E] tracking-[0.155em] leading-[24px] text-[24px]">
+                Get the second order in half price
+              </p>
+            </div>
+          </div>
+
         </div>
 
-        <div className="relative mt-[186px] lg:col-start-10 lg:col-span-3 md:col-start-1 md:col-span-2 sm:col-start-1 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 md:block md:mb-0 sm:mb-12 max-sm:mb-4">
-          <div className='flex w-[390px] gap-2.5 items-start'>
+        <div className="relative 2xl:mt-46 mt-32 2xl:translate-x-[0]  lg:translate-x-[-1rem] 2xl:ml-auto lg:col-start-10 lg:col-span-3 md:col-start-1 md:col-span-2 sm:col-start-1 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 md:block md:mb-0 sm:mb-12 max-sm:mb-4">
+          <div className='flex 2xl:w-[390px] w-[320px] gap-2.5 items-start'>
             <Image
               src="/images/Dot.svg"
               alt="pot title"
@@ -77,7 +88,7 @@ const SecondOrder = () => {
               className='object-cover lg:w-[8px] lg:h-[8px] mt-6'
             />
             <div>
-              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] text-[36px]">
+              <p className="mb-2.5 font-bold font-sans text-[#333333] leading-[1.5] 2xl:text-[36px] text-[32px]">
                 Flat pack postage
               </p>
               <p className="font-sans text-[#4F4F4F] leading-[1.5] text-base">
@@ -86,8 +97,6 @@ const SecondOrder = () => {
             </div>
           </div>
         </div>
-
-
 
       </div>
     </section>
