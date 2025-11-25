@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Materials from "./components/Materials";
 import Sizes from "./components/Sizes";
 import SecondOrder from "./components/SecondOrder";
+import Questions from "./components/Questions";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Materials />
       <Sizes />
       <SecondOrder />
+      <Questions />
     </main>
   );
 }
