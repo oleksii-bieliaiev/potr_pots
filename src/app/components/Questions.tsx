@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactForm from './ContactForm'
 
 const Questions = () => {
   return (
@@ -7,15 +8,26 @@ const Questions = () => {
         <div
           className="md:block sm:block max-sm:hidden
           absolute top-0 left-0 z-0
-          border-t-[554px] border-l-[88vw] border-b-[176px]
+          border-t-[474px] border-l-[88vw] border-b-[176px]
           border-t-[#FFEC7A] border-l-[#FFEC7A] border-b-transparent
 
           lg:border-l-[89vw] lg:border-b-[206px]
         "
         />
 
-        <div className='md:block z-100 font-bebas text-[36px] sm:col-start-1 sm:col-span-5 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] tracking-[0.15em] md:w-[700px] lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
-          have any questions?
+        <div className='md:block z-100 sm:col-start-1 sm:col-span-5 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-10.5 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
+          <div className='text-[36px] font-bebas tracking-[0.15em]'>
+            have any questions?
+          </div>
+          <p className='text-[16px] font-sans font-medium mb-7.5'>
+            Here few ways to get in touch with us:
+          </p>
+
+          <p className='text-[24px] font-sans font-medium mb-10'>
+            Message us
+          </p>
+
+          <ContactForm />
         </div>
       </div>
     </section>
