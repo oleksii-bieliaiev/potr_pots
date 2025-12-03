@@ -9,10 +9,9 @@ const Questions = () => {
         <div
           className="md:block sm:block max-sm:hidden
           absolute top-0 left-0 z-0
-          border-t-[474px] border-l-[88vw] border-b-[176px]
+          border-t-[474px] border-l-[89.5vw] border-b-[176px]
           border-t-[#FFEC7A] border-l-[#FFEC7A] border-b-transparent
-
-          lg:border-l-[89vw] lg:border-b-[166px]
+          lg:border-l-[calc(100vw-134px)] lg:border-b-[166px]
         "
         />
 
@@ -60,7 +59,7 @@ const Questions = () => {
         </div>
 
         <div className='lg:col-start-11 lg:col-span-2 z-20'>
-          <div className='translate-x-[4rem] translate-y-[-5.5rem]'>
+          <div className='2xl:translate-x-[8.5rem] 2xl:translate-y-[-5rem] lg:translate-x-[4rem] lg:translate-y-[-4rem]'>
             <Image
               src="/images/Circle.svg"
               alt="Circle"
@@ -78,6 +77,60 @@ const Questions = () => {
             </p>
             <p className='text-[16px] leading-[1.5] font-sans'>
               United Kingdom <br></br> 99 Staple Hill Road,<br></br> Bristol, BS16 5AD
+            </p>
+          </div>
+        </div>
+
+        <div className='lg:col-start-5 lg:col-span-4'>
+          <div className="flex justify-center">
+            <div className='flex justify-between w-[218px] mb-19 mt-30'>
+              <div>
+                <Image
+                  src="/images/twit.svg"
+                  alt="twit"
+                  width={30}
+                  height={30}
+                  className="object-contain w-[30px] h-[30px] z-20"
+                />
+              </div>
+
+              <div>
+                <Image
+                  src="/images/insta.svg"
+                  alt="insta"
+                  width={30}
+                  height={30}
+                  className="object-contain w-[30px] h-[30px] z-20"
+                />
+              </div>
+
+              <div>
+                <Image
+                  src="/images/fb.svg"
+                  alt="fb"
+                  width={30}
+                  height={30}
+                  className="object-contain w-[30px] h-[30px] z-20"
+                />
+              </div>
+
+            </div>
+          </div>
+
+          <div >
+            <p className='text-[36px] lg:flex justify-center font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
+              potrpots
+            </p>
+          </div>
+        </div>
+
+        <div className='lg:col-start-11 lg:col-span-2 ml-auto mr-0 '>
+          <div className='mb-6 mt-30 w-[128px]'>
+            <p className='flex justify-start text-[24px] font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
+              aBOUT uS
+            </p>
+            <p className='text-[16px] leading-[1.5] font-sans flex justify-start'>
+              Copyright © 2019
             </p>
           </div>
         </div>
