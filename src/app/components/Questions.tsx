@@ -11,11 +11,11 @@ const Questions = () => {
           absolute top-0 left-0 z-0
           border-t-[474px] border-l-[89.5vw] border-b-[176px]
           border-t-[#FFEC7A] border-l-[#FFEC7A] border-b-transparent
-          lg:border-l-[calc(100vw-134px)] lg:border-b-[166px]
+          lg:border-l-[calc(100vw-134px)] md:border-l-[100vw] lg:border-b-[166px] md:border-b-[106px] lg:border-t-[474px] md:border-t-[424px]
         "
         />
 
-        <div className='md:block z-100 lg:col-start-1 lg:col-span-5 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-10.5 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
+        <div className='md:block z-100 lg:col-start-1 lg:col-span-5 md:col-start-1 md:col-span-3 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] lg:w-[700px] lg:mt-10.5 md:mt-5 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
           <div className='text-[36px] font-bebas tracking-[0.15em]'>
             have any questions?
           </div>
@@ -30,8 +30,8 @@ const Questions = () => {
           <ContactForm />
         </div>
 
-        <div className='md:block z-100 lg:col-start-7 lg:col-span-4 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-20 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
-          <div className='mb-6'>
+        <div className='md:block z-100 lg:col-start-7 lg:col-span-4 md:col-start-5 md:col-span-2 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-25 md:mt-20 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
+          <div className='lg:mb-6 md:mb-6'>
             <p className='text-[24px] font-sans font-medium text-[rgba(0,0,0,0.29)]'>
               Our phone
             </p>
@@ -39,7 +39,7 @@ const Questions = () => {
               (270) 555-0117
             </p>
           </div>
-          <div className='mb-6'>
+          <div className='lg:mb-6 mb-6'>
             <p className='text-[24px] font-sans font-medium text-[rgba(0,0,0,0.29)]'>
               Our email
             </p>
@@ -47,19 +47,19 @@ const Questions = () => {
               potrpots@gmail.com
             </p>
           </div>
-          <div className='mb-6'>
+          <div className='lg:mb-6 mb-6'>
             <p className='text-[24px] font-sans font-medium text-[rgba(0,0,0,0.29)]'>
               Our office
             </p>
-            <p className='text-[16px] font-sans'>
-              United Kingdom  99 Staple Hill Road,<br></br> Bristol, BS16 5AD
+            <p className='text-[16px] font-sans md:w-[200px]'>
+              United Kingdom 99 Staple Hill Road,<br className='lg:inline md:hidden'></br> Bristol, BS16 5AD
             </p>
           </div>
 
         </div>
 
-        <div className='lg:col-start-11 lg:col-span-2 z-20'>
-          <div className='2xl:translate-x-[8.5rem] 2xl:translate-y-[-5rem] lg:translate-x-[4rem] lg:translate-y-[-4rem]'>
+        <div className='lg:col-start-11 lg:col-span-2 md:absolute z-20 right-1'>
+          <div className='2xl:translate-x-[8.5rem] 2xl:translate-y-[-5rem] lg:translate-x-[4rem] lg:translate-y-[-4rem] md:translate-x-[4rem] md:translate-y-[-4rem]'>
             <Image
               src="/images/Circle.svg"
               alt="Circle"
@@ -70,7 +70,7 @@ const Questions = () => {
           </div>
         </div>
 
-        <div className='lg:col-start-1 lg:col-span-2 '>
+        <div className='lg:col-start-1 lg:col-span-2  md:col-start-1 md:col-span-2 '>
           <div className='mb-6 mt-30'>
             <p className='text-[24px] font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
               Adrress
@@ -81,50 +81,56 @@ const Questions = () => {
           </div>
         </div>
 
-        <div className='lg:col-start-5 lg:col-span-4'>
+        <div className='lg:col-start-5 lg:col-span-4 md:col-start-3 md:col-span-2'>
           <div className="flex justify-center">
             <div className='flex justify-between w-[218px] mb-19 mt-30'>
               <div>
-                <Image
-                  src="/images/twit.svg"
-                  alt="twit"
-                  width={30}
-                  height={30}
-                  className="object-contain w-[30px] h-[30px] z-20"
-                />
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/twit.svg"
+                    alt="twit"
+                    width={30}
+                    height={30}
+                    className="object-contain lg:w-[30px] lg:h-[30px] md:w-[20px] md:h-[20px] z-20 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+                  />
+                </a>
               </div>
 
               <div>
-                <Image
-                  src="/images/insta.svg"
-                  alt="insta"
-                  width={30}
-                  height={30}
-                  className="object-contain w-[30px] h-[30px] z-20"
-                />
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/insta.svg"
+                    alt="insta"
+                    width={30}
+                    height={30}
+                    className="object-contain lg:w-[30px] lg:h-[30px] md:w-[20px] md:h-[20px] z-20 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+                  />
+                </a>
               </div>
 
               <div>
-                <Image
-                  src="/images/fb.svg"
-                  alt="fb"
-                  width={30}
-                  height={30}
-                  className="object-contain w-[30px] h-[30px] z-20"
-                />
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/fb.svg"
+                    alt="fb"
+                    width={30}
+                    height={30}
+                    className="object-contain lg:w-[30px] lg:h-[30px] md:w-[20px] md:h-[20px] z-20 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+                  />
+                </a>
               </div>
 
             </div>
           </div>
 
           <div >
-            <p className='text-[36px] lg:flex justify-center font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
+            <p className='text-[36px] md:flex justify-center font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
               potrpots
             </p>
           </div>
         </div>
 
-        <div className='lg:col-start-11 lg:col-span-2 ml-auto mr-0 '>
+        <div className='lg:col-start-11 lg:col-span-2 md:col-start-5 md:col-span-2 ml-auto mr-0 '>
           <div className='mb-6 mt-30 w-[128px]'>
             <p className='flex justify-start text-[24px] font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
               aBOUT uS

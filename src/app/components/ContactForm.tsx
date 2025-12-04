@@ -2,13 +2,13 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <form className="w-full max-w-md ml-0 flex flex-col gap-6">
+    <form className="w-full max-w-md ml-0 flex flex-col lg:gap-6">
       {/* Name Field */}
       <div className="relative font-sans ">
         <input
           type="text"
           placeholder="Name"
-          className="w-full border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
+          className="w-[370px] border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
         />
       </div>
 
@@ -17,7 +17,7 @@ const ContactForm = () => {
         <input
           type="email"
           placeholder="Email"
-          className="w-full border-b-2 placeholder:text-black  border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
+          className="w-[370px] border-b-2 placeholder:text-black  border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
         />
       </div>
 
@@ -25,7 +25,7 @@ const ContactForm = () => {
       <div className="relative font-sans ">
         <textarea
           placeholder="Message"
-          className="w-full placeholder:text-black border-b-2 border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300 resize-none mb-7"
+          className="w-[370px] placeholder:text-black border-b-2 border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300 resize-none mb-7"
           rows={1}
         />
       </div>
