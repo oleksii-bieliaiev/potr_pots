@@ -8,7 +8,7 @@ const ContactForm = () => {
         <input
           type="text"
           placeholder="Name"
-          className="w-[370px] border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
+          className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)] border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
         />
       </div>
 
@@ -17,7 +17,7 @@ const ContactForm = () => {
         <input
           type="email"
           placeholder="Email"
-          className="w-[370px] border-b-2 placeholder:text-black  border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
+          className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)] border-b-2 placeholder:text-black  border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300"
         />
       </div>
 
@@ -25,13 +25,13 @@ const ContactForm = () => {
       <div className="relative font-sans ">
         <textarea
           placeholder="Message"
-          className="w-[370px] placeholder:text-black border-b-2 border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300 resize-none mb-7"
+          className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)] placeholder:text-black border-b-2 border-[rgba(0,0,0,0.29)] focus:border-[#03839E] outline-none py-2 transition-colors duration-300 resize-none mb-7"
           rows={1}
         />
       </div>
 
       {/* Submit Button */}
-      <button className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] bg-[#03839E] hover:bg-[rgba(3,131,158,0.7)] text-white tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300 ml-0">
+      <button className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-[calc(100vw-68px)] h-[48px] bg-[#03839E] hover:bg-[rgba(3,131,158,0.7)] text-white tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300 ml-0">
         Submit <span className="ml-2">⟶</span>
       </button>
     </form>
