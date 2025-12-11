@@ -44,7 +44,7 @@ const Navbar = () => {
           className='pl-0 lg:flex hidden'
         />
         <a 
-        className='pl-0 flex lg:hidden'
+        className='pl-0 flex lg:hidden cursor-pointer'
         onClick={() => setMenuOpen(true)}
         >
           <Image
