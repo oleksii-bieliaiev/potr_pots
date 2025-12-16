@@ -107,7 +107,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
                   height={42}
                   className='pl-0 w-[18px] h-[46px] flex '
                 />
-                 <Image
+                <Image
                   src="/images/small_line.svg"
                   alt="menu"
                   width={18}
