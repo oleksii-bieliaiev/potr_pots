@@ -10,7 +10,9 @@ const ForWhom = () => {
         </div>
 
         <div className="hidden lg:block group absolute 2xl:top-[80px] lg:top-[100px] 2xl:right-[110px] lg:right-[130px] z-50 cursor-pointer transition-all duration-300">
-          <div className="transition-transform duration-300 group-hover:translate-y-1 group-hover:opacity-80">
+          <a
+            href='#header'
+            className="block transition-transform duration-300 group-hover:translate-y-1 group-hover:opacity-80">
             <Image
               src="/images/helper.svg"
               alt="more about"
@@ -18,7 +20,7 @@ const ForWhom = () => {
               height={144}
               className="object-cover"
             />
-          </div>
+          </a>
         </div>
 
         <div className='lg:col-start-1 lg:col-span-5 md:col-start-1 md:col-span-3 md:block sm:hidden max-sm:hidden'>

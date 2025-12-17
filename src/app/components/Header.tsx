@@ -17,7 +17,9 @@ const Header = () => {
         "
         />
         <Navbar />
-        <div className="group lg:col-start-1 lg:col-span-1 md:col-start-1 cursor-pointer md:col-span-1 flex flex-col items-start lg:justify-end md:justify-end sm:justify-end max-sm:bottom-[-2rem] max-sm:z-50 max-sm:right-3 lg:mt-10 lg:relative md:absolute sm:absolute max-sm:absolute ml-0 gap-2 mr-auto z-10 2xl:pb-10
+        <a
+          href='#for_whom'
+          className="group lg:col-start-1 lg:col-span-1 md:col-start-1 cursor-pointer md:col-span-1 flex flex-col items-start lg:justify-end md:justify-end sm:justify-end max-sm:bottom-[-2rem] max-sm:z-50 max-sm:right-3 lg:mt-10 lg:relative md:absolute sm:absolute max-sm:absolute ml-0 gap-2 mr-auto z-10 2xl:pb-10
          lg:pb-20 2xl:bottom-[-3rem] lg:bottom-[-5rem] md:bottom-[-1rem] sm:bottom-0 transition-all duration-300">
           <div className="transition-transform duration-300 group-hover:translate-y-1 group-hover:opacity-80">
             <Image
@@ -38,7 +40,7 @@ const Header = () => {
               className="object-cover"
             />
           </div>
-        </div>
+        </a>
         <div className='max-sm:hidden lg:col-start-2 lg:col-end-6 md:col-start-1 md:col-span-3 sm:col-start-1 sm:col-span-3' >
           <ProductInfoBlock />
         </div>

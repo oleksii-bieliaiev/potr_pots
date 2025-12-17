@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut, easeOut } from "framer-motion";
 import Image from 'next/image';
 
 interface MenuProps {
@@ -11,15 +11,15 @@ interface MenuProps {
 const menuVariants = {
   hidden: {
     x: '100%',
-    transition: { duration: 0.5, ease: 'easeInOut' },
+    transition: { duration: 0.5, ease: easeInOut },
   },
   visible: {
     x: '0%',
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: easeOut },
   },
   exit: {
     x: '100%',
-    transition: { duration: 0.5, ease: 'easeInOut' },
+    transition: { duration: 0.5, ease: easeInOut },
   },
 };
 
@@ -65,7 +65,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               <div className='flex flex-col w-full pb-[20px]'>
                 <a
                   onClick={onClose}
-                  href="#current-events"
+                  href="#features"
                   className=' font-sans md:text-[26px] sm:text-[26px] max-sm:text-[20px] leading-[150%] tracking-[0]  font-normal text-[#F8F8F8] 
       hover:text-[#F14A27] transition-all duration-500'
                 >
@@ -76,7 +76,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               <div className='flex flex-row w-full pb-[20px]'>
                 <a
                   onClick={onClose}
-                  href="#page-top"
+                  href="#materials"
                   className=' font-sans md:text-[26px] sm:text-[26px] max-sm:text-[20px] leading-[150%] tracking-[0] font-normal text-[#F8F8F8] 
       hover:text-[#F14A27] transition-all duration-500'
                 >
@@ -87,11 +87,22 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               <div className='flex flex-row w-full pb-[20px]'>
                 <a
                   onClick={onClose}
-                  href="#subscription"
+                  href="#about_us"
                   className=' font-sans md:text-[26px] sm:text-[26px] max-sm:text-[20px] leading-[150%] tracking-[0] font-normal text-[#F8F8F8] 
       hover:text-[#F14A27] transition-all duration-500'
                 >
                   About us
+                </a>
+              </div>
+
+              <div className='flex flex-row w-full pb-[20px]'>
+                <a
+                  onClick={onClose}
+                  href="#message_us"
+                  className=' font-sans md:text-[26px] sm:text-[26px] max-sm:text-[20px] leading-[150%] tracking-[0] font-normal text-[#F8F8F8] 
+      hover:text-[#F14A27] transition-all duration-500'
+                >
+                  Message us
                 </a>
               </div>
             </div>

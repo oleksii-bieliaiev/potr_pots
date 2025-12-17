@@ -137,7 +137,9 @@ const SecondOrder = () => {
         </div>
         
         <div className="relative mt-22 lg:hidden md:flex sm:hidden  max-sm:hidden justify-end md:col-start-6 md:col-span-1">
-          <div className="cursor-pointer transition-transform duration-300 hover:translate-y-1 hover:opacity-80">
+          <a 
+          href='#features'
+          className="block cursor-pointer transition-transform duration-300 hover:translate-y-1 hover:opacity-80">
             <Image
               src="/images/Line_2.svg"
               alt="line_2"
@@ -145,7 +147,7 @@ const SecondOrder = () => {
               height={211}
               className="object-cover w-[14px] h-[211px]"
             />
-          </div>
+          </a>
 
         </div>
 

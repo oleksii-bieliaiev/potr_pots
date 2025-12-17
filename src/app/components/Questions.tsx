@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Questions = () => {
   return (
-    <section id='second_order' className='relative flex flex-col lg:min-h-auto md:min-h-auto 2xl:mb-10 md:mb-20 sm:mb-6 md:mt-0 sm:mt-0 max-sm:mt-25 max-sm:mb-10 lg:mt-0'>
+    <section id='message_us' className='relative flex flex-col lg:min-h-auto md:min-h-auto 2xl:mb-10 md:mb-20 sm:mb-6 md:mt-0 sm:mt-0 max-sm:mt-25 max-sm:mb-10 lg:mt-0'>
       <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-8 lg:gap-y-2 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 lg:pr-[134px] lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] max-sm:pl-[34px] sm:pr-[34px] max-sm:pr-[34px] md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:w-full max-sm:mx-auto  '>
         <div
           className="md:block sm:block 
@@ -132,9 +132,11 @@ const Questions = () => {
 
         <div className='lg:col-start-11 lg:col-span-2 md:col-start-5 md:col-span-2 sm:col-start-5 sm:col-span-2 ml-auto mr-0 max-sm:hidden '>
           <div className='mb-6 mt-30 w-[128px]'>
-            <p className='flex justify-start text-[24px] font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium'>
+            <a 
+            href='#about_us'
+            className='flex justify-start text-[24px] font-bebas leading-[24px] tracking-[0.155em] mb-2.5 font-medium hover:opacity-50 transition-opacity duration-300 cursor-pointer'>
               aBOUT uS
-            </p>
+            </a>
             <p className='text-[16px] leading-[1.5] font-sans flex justify-start'>
               Copyright © 2019
             </p>

@@ -7,7 +7,9 @@ const ForWhomSecond = () => {
       <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-8 lg:gap-y-2 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 2xl:mt-[0px] lg:mt-[0px] lg:pr-[134px] lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] max-sm:pl-[34px] sm:pr-[34px] max-sm:pr-[34px] md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:w-full max-sm:mx-auto'>
 
         <div className="hidden lg:block group absolute bottom-[44px] left-[135px] z-50 cursor-pointer transition-all duration-300">
-          <div className="transition-transform duration-300 group-hover:translate-y-1 group-hover:opacity-80">
+          <a
+            href='#header'
+            className="transition-transform block duration-300 group-hover:translate-y-1 group-hover:opacity-80">
             <Image
               src="/images/helper_2.svg"
               alt="more about"
@@ -15,7 +17,7 @@ const ForWhomSecond = () => {
               height={144}
               className="object-cover"
             />
-          </div>
+          </a>
         </div>
 
         <div className='lg:col-start-2 lg:col-span-3 md:col-start-1 md:col-span-6 sm:col-start-1 sm:col-span-6 max-sm:col-start-1 max-sm:col-span-2 flex lg:flex-col md:flex-row-reverse lg:justify-normal md:justify-between 2xl:mt-[7.5rem] lg:mt-40 lg:mb-0 md:mb-18 '>
