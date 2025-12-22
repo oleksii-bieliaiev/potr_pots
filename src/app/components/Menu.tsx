@@ -47,10 +47,10 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
           transition={{ duration: 0.5 }}
           id="menu"
           className='fixed flex flex-col top-0 right-0 h-screen w-[80vw] z-150'>
-          <div className='grid lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 md:gap-8 sm:gap-x-4 max-sm:gap-x-4 bg-[#03839E] md:h-full sm:h-full max-sm:h-full lg:pt-[40px] lg:pr-[55px] md:pt-[40px] sm:pt-[30px] max-sm:pt-[30px] md:pr-[39px] max-sm:pr-[20px] sm:pr-[20px] lg:pl-[55px] md:pl-[39px] max-sm:pl-[20px] sm:pl-[20px] lg:pb-[40px] md:pb-[40px] sm:pb-[30px] max-sm:pb-[30px]  '>
+          <div className='grid lg:grid-cols-6 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 md:gap-8 sm:gap-x-4 max-sm:gap-x-4 bg-[#03839E] md:h-full sm:h-full max-sm:h-full lg:pt-[40px] lg:pr-[55px] md:pt-[40px] sm:pt-[30px] max-sm:pt-[30px] md:pr-[39px] max-sm:pr-[20px] sm:pr-[20px] lg:pl-[55px] md:pl-[39px] max-sm:pl-[20px] sm:pl-[20px] lg:pb-[40px] md:pb-[40px] sm:pb-[30px] max-sm:pb-[30px]  '>
 
 
-            <div className='flex md:col-start-3 md:col-span-3 sm:col-start-3 sm:col-span-3 max-sm:col-start-1 max-sm:col-span-2 max-sm:h-[70vh] flex-col justify-center items-center max-sm:mx-auto'>
+            <div className='flex lg:col-start-3 lg:col-span-3 md:col-start-3 md:col-span-3 sm:col-start-3 sm:col-span-3 max-sm:col-start-1 max-sm:col-span-2 max-sm:h-[70vh] flex-col justify-center items-center max-sm:mx-auto'>
               <div className='flex flex-col w-full pb-[20px]'>
                 <a
                   onClick={onClose}

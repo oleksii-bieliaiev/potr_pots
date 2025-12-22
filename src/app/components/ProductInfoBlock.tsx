@@ -1,7 +1,13 @@
 // components/ProductInfoBlock.tsx
+'use client'
 import React from 'react';
 
-const ProductInfoBlock = () => {
+interface ProductInfoBlockProps {
+  onBuyClick: () => void;
+}
+
+const ProductInfoBlock = ({ onBuyClick }: ProductInfoBlockProps) => {
+
   return (
     <div className='font-bebas md:text-[64px] sm:text-[42px] max-sm:text-4xl md:leading-[64px] sm:leading-[54px] md:tracking-[0.15em] sm:tracking-[0.15em] max-sm:tracking-[0.15em] max-sm:leading-[44px] uppercase font-normal  flex flex-col items-start lg:justify-start md:justify-start sm:justify-start 2xl:mt-12 lg:mt-15 md:mt-0 md:relative sm:relative max-sm:relative max-sm:mt-3 max-sm:mb-auto max-sm:left-1/2 max-sm:-translate-x-1/2 md:w-[450px] md:h-[450px] sm:h-[450px] max-sm:pr-[34px] max-sm:pl-[34px] max-sm:w-full max-sm:h-[172px] z-20 2xl:translate-x-0 lg:translate-x-[-2rem]'>
       <p >
@@ -27,10 +33,13 @@ const ProductInfoBlock = () => {
       </div>
 
       <div className="w-full flex flex-col items-end justify-end 2xl:mt-[50px] lg:mt-[20px] md:mt-[50px] sm:mt-[50px] max-sm:mt-[20px] max-sm:pb-5 lg:pr-0 md:pr-[90px] z-10">
-        <button className="lg:w-[270px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] bg-[#FFE339] hover:bg-[#FFEC7A] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300">
+        <button
+          onClick={onBuyClick}
+          className="lg:w-[270px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] bg-[#FFE339] hover:bg-[#FFEC7A] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300">
           BUY NOW  <span className=" ml-2">⟶</span>
         </button>
       </div>
+
     </div>
   );
 };
