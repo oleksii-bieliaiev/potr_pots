@@ -56,7 +56,18 @@ const BuyPot: React.FC<BuyPotProps> = ({ onClose }) => {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.6, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-white max-h-[90vh] w-[90vw] max-w-[700px] p-8 relative flex flex-col gap-6 overflow-y-auto"
+        className="
+    bg-white
+    border-2
+    shadow-2xl
+    max-h-[90vh]
+    w-[90vw]
+    max-w-[700px]
+    p-8
+    relative
+    flex flex-col gap-6
+    overflow-y-auto
+  "
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -174,11 +185,10 @@ const BuyPot: React.FC<BuyPotProps> = ({ onClose }) => {
             <button
               disabled={isDisabled}
               onClick={handleSubmit}
-              className={`py-3 transition tracking-[0] font-sans cursor-pointer font-semibold text-[14px] ${
-                isDisabled
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-[#1A5A4C] text-white hover:bg-[#154a3e]"
-              }`}
+              className={`py-3 transition tracking-[0] font-sans cursor-pointer font-semibold text-[14px] ${isDisabled
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-[#1A5A4C] text-white hover:bg-[#154a3e]"
+                }`}
             >
               BUY NOW
             </button>
