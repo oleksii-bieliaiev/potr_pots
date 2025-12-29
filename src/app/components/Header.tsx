@@ -5,9 +5,10 @@ import Navbar from './Navbar'
 import Image from 'next/image'
 import ProductInfoBlock from './ProductInfoBlock'
 import BuyPot from './BuyPot'
+import { useViews } from '../context/ViewsContext'
 
 const Header = () => {
-  const [isBuyOpen, setIsBuyOpen] = useState(false);
+  const { isBuyOpen, openBuy } = useViews();
   return (
     <section id='header' className='relative flex flex-col lg:min-h-auto md:max-h-[125vh] max-sm:min-h-auto w-[100vw] lg:mb-10 md:mb-30 sm:mb-20 max-sm:mb-40'>
       <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-8 lg:gap-y-2 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 lg:pr-[134px] lg:pl-[134px] md:pr-[34px] md:pl-[34px] sm:pl-[34px] max-sm:pl-0 sm:pr-[34px] max-sm:pr-0  md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:w-full max-sm:mx-auto  '>
@@ -46,7 +47,7 @@ const Header = () => {
           </div>
         </a>
         <div className='max-sm:hidden lg:col-start-2 lg:col-end-6 md:col-start-1 md:col-span-3 sm:col-start-1 sm:col-span-3' >
-          <ProductInfoBlock onBuyClick={() => setIsBuyOpen(true)}  />
+          <ProductInfoBlock onBuyClick={openBuy}  />
         </div>
 
         <div className='lg:col-start-[7] lg:col-span-6 md:col-start-4 md:col-span-3 sm:col-start-4 sm:col-span-3 max-sm:col-start-1 max-sm:col-span-2 flex flex-col items-end lg:justify-start 2xl:mt-12 lg:mt-15 max-sm:mt-6 max-sm:mb-7 md:relative  mr-0 z-10'>
@@ -60,13 +61,13 @@ const Header = () => {
         </div>
 
         <div className='hidden max-sm:block max-sm:col-start-1 max-sm:col-span-2 '>
-          <ProductInfoBlock onBuyClick={() => setIsBuyOpen(true)} />
+          <ProductInfoBlock onBuyClick={openBuy} />
         </div>
 
       </div>
 
       {isBuyOpen && (
-        <BuyPot onClose={() => setIsBuyOpen(false)} />
+        <BuyPot />
       )}
     </section>
   )

@@ -3,8 +3,10 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Menu from './Menu';
+import { useViews } from '../context/ViewsContext';
 
 const Navbar = () => {
+  const { ordersCount } = useViews();
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className='flex col-start-1 col-span-12 lg:h-[80px] max-sm:justify-center max-sm:w-full max-sm:px-[30px] '>
@@ -36,13 +38,30 @@ const Navbar = () => {
           </a>
         </div>
 
-        <Image
-          src="/images/bag.svg"
-          alt="bag"
-          width={48}
-          height={48}
-          className='pl-0 lg:flex hidden'
-        />
+        <div className="relative lg:flex hidden">
+          <Image
+            src="/images/bag.svg"
+            alt="bag"
+            width={48}
+            height={48}
+            className="pl-0"
+          />
+
+          {ordersCount > 0 && (
+            <span
+              className="
+        absolute -top-1 -right-1
+        bg-red-500 text-white
+        text-xs font-bold
+        w-5 h-5
+        rounded-full
+        flex items-center justify-center
+      "
+            >
+              {ordersCount}
+            </span>
+          )}
+        </div>
         <a
           className='pl-0 flex lg:hidden hover:opacity-50 transition-opacity duration-300 cursor-pointer'
           onClick={() => setMenuOpen(true)}

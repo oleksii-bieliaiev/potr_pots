@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Manrope } from "next/font/google"; 
+import { Bebas_Neue, Manrope } from "next/font/google";
 import "./globals.css";
+import { ViewsProvider } from "./context/ViewsContext";
 
 
 const bebas = Bebas_Neue({
@@ -27,11 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${bebas.variable} ${manrope.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <ViewsProvider>
+        <body
+          className={`${bebas.variable} ${manrope.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </ViewsProvider>
     </html>
   );
 }

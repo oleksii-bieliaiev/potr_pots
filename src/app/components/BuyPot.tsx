@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useMemo, useState } from "react";
+import { useViews } from "../context/ViewsContext";
 
-interface BuyPotProps {
-  onClose: () => void;
-}
 
 type SizeType = "small" | "large";
 
@@ -13,11 +11,12 @@ const PRICES = {
   large: 15,
 };
 
-const BuyPot: React.FC<BuyPotProps> = ({ onClose }) => {
+const BuyPot: React.FC = () => {
   const [quantities, setQuantities] = useState({
     small: 0,
-    large: 1,
+    large: 0,
   });
+  const { addOrder, closeBuy } = useViews();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -43,6 +42,11 @@ const BuyPot: React.FC<BuyPotProps> = ({ onClose }) => {
 
   const handleSubmit = () => {
     if (isDisabled) return;
+
+    const totalItems =
+      quantities.small + quantities.large;
+
+    addOrder(totalItems); // 🔥 вот тут магия
     setIsSubmitted(true);
   };
 
@@ -71,7 +75,7 @@ const BuyPot: React.FC<BuyPotProps> = ({ onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          onClick={onClose}
+          onClick={closeBuy}
           className="absolute top-4 right-4 text-x hover:opacity-50 transition-opacity duration-300 cursor-pointer"
         >
           ✖
