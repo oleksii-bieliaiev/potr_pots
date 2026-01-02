@@ -2,10 +2,19 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+type Cart = {
+  small: number;
+  large: number;
+};
+
 type ViewsContextType = {
+  cart: Cart;
   ordersCount: number;
-  addOrder: (count: number) => void;
-  clearOrders: () => void;
+
+  addToCart: (items: Cart) => void;
+  updateCart: (items: Cart) => void;
+  clearCart: () => void;
+
   isBuyOpen: boolean;
   openBuy: () => void;
   closeBuy: () => void;
@@ -14,28 +23,43 @@ type ViewsContextType = {
 const ViewsContext = createContext<ViewsContextType | null>(null);
 
 export const ViewsProvider = ({ children }: { children: React.ReactNode }) => {
-  const [ordersCount, setOrdersCount] = useState(0);
+  const [cart, setCart] = useState<Cart>({
+    small: 0,
+    large: 0,
+  });
+
   const [isBuyOpen, setIsBuyOpen] = useState(false);
 
-  // 👉 загрузка из localStorage
+
+  const ordersCount = cart.small + cart.large;
+
+
   useEffect(() => {
-    const stored = localStorage.getItem("ordersCount");
-    if (stored) {
-      setOrdersCount(Number(stored));
+    try {
+      const stored = localStorage.getItem("cart");
+      if (stored) setCart(JSON.parse(stored));
+    } catch (err) {
+      console.error("Failed to parse cart from localStorage", err);
     }
   }, []);
-
-  // 👉 сохранение в localStorage
+  
   useEffect(() => {
-    localStorage.setItem("ordersCount", ordersCount.toString());
-  }, [ordersCount]);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
-  const addOrder = (count: number) => {
-    setOrdersCount((prev) => prev + count);
+  const addToCart = (items: Cart) => {
+    setCart((prev) => ({
+      small: prev.small + items.small,
+      large: prev.large + items.large,
+    }));
   };
 
-  const clearOrders = () => {
-    setOrdersCount(0);
+  const updateCart = (items: Cart) => {
+    setCart(items);
+  };
+
+  const clearCart = () => {
+    setCart({ small: 0, large: 0 });
   };
 
   const openBuy = () => setIsBuyOpen(true);
@@ -43,7 +67,16 @@ export const ViewsProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <ViewsContext.Provider
-      value={{ ordersCount, addOrder, clearOrders, isBuyOpen, openBuy, closeBuy }}
+      value={{
+        cart,
+        ordersCount,
+        addToCart,
+        updateCart,
+        clearCart,
+        isBuyOpen,
+        openBuy,
+        closeBuy,
+      }}
     >
       {children}
     </ViewsContext.Provider>

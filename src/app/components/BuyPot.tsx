@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useViews } from "../context/ViewsContext";
 
 
@@ -12,13 +12,17 @@ const PRICES = {
 };
 
 const BuyPot: React.FC = () => {
-  const [quantities, setQuantities] = useState({
-    small: 0,
-    large: 0,
-  });
-  const { addOrder, closeBuy } = useViews();
+  const { cart, updateCart, clearCart, closeBuy } = useViews();
+  const [quantities, setQuantities] = useState(() => ({
+    small: cart.small,
+    large: cart.large,
+  }));
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    setQuantities(cart);
+  }, [cart]);
 
   const calcPrice = (quantity: number, price: number) => {
     const full = Math.ceil(quantity / 2);
@@ -41,13 +45,14 @@ const BuyPot: React.FC = () => {
   const isDisabled = quantities.small === 0 && quantities.large === 0;
 
   const handleSubmit = () => {
-    if (isDisabled) return;
-
-    const totalItems =
-      quantities.small + quantities.large;
-
-    addOrder(totalItems); // 🔥 вот тут магия
+    updateCart(quantities);
     setIsSubmitted(true);
+  };
+
+  const handleClear = () => {
+    clearCart();
+    setQuantities({ small: 0, large: 0 });
+    setIsSubmitted(false);
   };
 
   return (
@@ -196,6 +201,25 @@ const BuyPot: React.FC = () => {
             >
               BUY NOW
             </button>
+            {(cart.small > 0 || cart.large > 0) && (
+              <button
+                onClick={handleClear}
+                className="
+                py-2
+                text-sm
+                font-sans
+                font-semibold
+                cursor-pointer
+               text-red-600
+                border border-red-300
+                hover:bg-red-50
+                tracking-[0]
+                transition
+              "
+              >
+                CLEAR CART
+              </button>
+            )}
           </>
         )}
       </motion.aside>

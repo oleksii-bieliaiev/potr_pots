@@ -6,7 +6,7 @@ import Menu from './Menu';
 import { useViews } from '../context/ViewsContext';
 
 const Navbar = () => {
-  const { ordersCount } = useViews();
+  const { ordersCount, openBuy } = useViews();
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className='flex col-start-1 col-span-12 lg:h-[80px] max-sm:justify-center max-sm:w-full max-sm:px-[30px] '>
@@ -38,7 +38,10 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="relative lg:flex hidden">
+        <div 
+        className="relative lg:flex hidden cursor-pointer hover:opacity-50 transition-opacity duration-300"
+        onClick={openBuy}
+        >
           <Image
             src="/images/bag.svg"
             alt="bag"
