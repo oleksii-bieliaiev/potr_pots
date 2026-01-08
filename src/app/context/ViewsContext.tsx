@@ -10,8 +10,7 @@ type Cart = {
 type ViewsContextType = {
   cart: Cart;
   ordersCount: number;
-
-  addToCart: (items: Cart) => void;
+  
   updateCart: (items: Cart) => void;
   clearCart: () => void;
 
@@ -47,12 +46,6 @@ export const ViewsProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (items: Cart) => {
-    setCart((prev) => ({
-      small: prev.small + items.small,
-      large: prev.large + items.large,
-    }));
-  };
 
   const updateCart = (items: Cart) => {
     setCart(items);
@@ -70,7 +63,6 @@ export const ViewsProvider = ({ children }: { children: React.ReactNode }) => {
       value={{
         cart,
         ordersCount,
-        addToCart,
         updateCart,
         clearCart,
         isBuyOpen,
