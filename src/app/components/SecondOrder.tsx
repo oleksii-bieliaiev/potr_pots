@@ -1,7 +1,13 @@
+'use client';
+
 import Image from 'next/image'
 import React from 'react'
+import { useViews } from '../context/ViewsContext';
+import BuyPot from './BuyPot';
 
 const SecondOrder = () => {
+  const { isBuyOpen, openBuy } = useViews();
+
   return (
     <section id='second_order' className='relative flex flex-col lg:min-h-auto md:min-h-auto 2xl:mb-10 md:mb-0 sm:mb-6 md:mt-0 sm:mt-25 max-sm:mt-25 max-sm:mb-10 lg:mt-0'>
       <div className='grid lg:grid-cols-12 2xl:gap-8 lg:gap-x-4 lg:gap-y-2 md:gap-x-8 sm:gap-x-8 md:grid-cols-6 sm:grid-cols-6 max-sm:grid-cols-2 lg:mt-0 lg:pr-[134px] lg:pl-0 md:pr-[34px] md:pl-[34px] sm:pl-[34px] sm:pr-[34px] max-sm:pl-[34px] max-sm:pr-[34px] md:w-auto md:mx-0 sm:w-full sm:mx-auto max-sm:mx-auto max-sm:justify-center max-sm:w-full max-sm:px-4 '>
@@ -78,7 +84,9 @@ const SecondOrder = () => {
           </div>
 
           <div className="w-full lg:flex md:hidden sm:hidden max-sm:flex max-sm:justify-center flex-col items-start max-sm:items-center lg:mt-[20px] md:mt-[50px] sm:mt-[50px] max-sm:mt-[20px] max-sm:pb-5 lg:pr-0 md:pr-[90px] z-10">
-            <button className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] border max-sm:bg-[#FFE339] border-[#03839E] max-sm:border-[#FFE339] max-sm:hover:bg-[#FFEC7A] hover:bg-[#03839E] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300">
+            <button
+              onClick={openBuy}
+              className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] border max-sm:bg-[#FFE339] border-[#03839E] max-sm:border-[#FFE339] max-sm:hover:bg-[#FFEC7A] hover:bg-[#03839E] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300">
               BUY NOW  <span className=" ml-2">⟶</span>
             </button>
           </div>
@@ -119,7 +127,9 @@ const SecondOrder = () => {
 
         <div className="relative mt-32 lg:hidden md:block max-sm:hidden md:col-start-4 md:col-span-2 sm:col-start-4 sm:col-span-3 ">
           <div className="w-full lg:hidden md:flex flex-col md:items-start lg:mt-[20px] md:mt-[70px] sm:mt-[20px] max-sm:mt-[20px] max-sm:pb-5 lg:pr-0 md:pr-[90px] z-10">
-            <button className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] border border-[#03839E] hover:bg-[#03839E] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300 sm:ml-auto">
+            <button
+              onClick={openBuy}
+              className="lg:w-[238px] md:w-[240px] sm:w-[240px] max-sm:w-full h-[48px] border border-[#03839E] hover:bg-[#03839E] tracking-[0] font-sans cursor-pointer font-semibold text-[14px] flex items-center justify-center gap-2 transition-colors duration-300 sm:ml-auto">
               BUY NOW  <span className=" ml-2">⟶</span>
             </button>
           </div>
@@ -135,11 +145,11 @@ const SecondOrder = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="relative mt-22 lg:hidden md:flex sm:hidden  max-sm:hidden justify-end md:col-start-6 md:col-span-1">
-          <a 
-          href='#features'
-          className="block cursor-pointer transition-transform duration-300 hover:translate-y-1 hover:opacity-80">
+          <a
+            href='#features'
+            className="block cursor-pointer transition-transform duration-300 hover:translate-y-1 hover:opacity-80">
             <Image
               src="/images/Line_2.svg"
               alt="line_2"
@@ -152,6 +162,10 @@ const SecondOrder = () => {
         </div>
 
       </div>
+
+      {isBuyOpen && (
+        <BuyPot />
+      )}
     </section>
   )
 }

@@ -23,14 +23,14 @@ const Questions = () => {
             Here few ways to get in touch with us:
           </p>
 
-          <p className='text-[24px] font-sans font-medium mb-10'>
+          <p className='text-[24px] font-sans font-medium mb-5 md:mb-3 sm:mb-3 max-sm:mb-3'>
             Message us
           </p>
 
           <ContactForm />
         </div>
 
-        <div className='md:block z-100 lg:col-start-7 lg:col-span-4 md:col-start-5 md:col-span-2 sm:col-start-5 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-25 md:mt-20 sm:mt-20 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
+        <div className='md:block z-80 lg:col-start-7 lg:col-span-4 md:col-start-5 md:col-span-2 sm:col-start-5 sm:col-span-2 max-sm:col-start-1 max-sm:col-span-2 leading-[1.5] md:w-[700px] lg:mt-25 md:mt-20 sm:mt-20 lg:mb-16 md:mb-10.5 sm:mb-6.5 max-sm:mb-6.5'>
           <div className='lg:mb-6 md:mb-6 sm:mb-6 max-sm:mb-6 max-sm:mt-6'>
             <p className='text-[24px] font-sans font-medium text-[rgba(0,0,0,0.29)]'>
               Our phone
