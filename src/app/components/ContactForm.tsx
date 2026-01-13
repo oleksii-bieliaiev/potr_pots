@@ -42,7 +42,6 @@ const ContactForm = () => {
       [e.target.name]: e.target.value,
     });
 
-    // очищаем ошибку при вводе
     setErrors({
       ...errors,
       [e.target.name]: "",
@@ -54,85 +53,92 @@ const ContactForm = () => {
 
     if (validate()) {
       setIsSubmitted(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+      setErrors({});
     }
   };
 
   return (
     <>
-        <form
-          onSubmit={handleSubmit}
-          className="w-full max-w-md ml-0 flex flex-col lg:gap-6 md:gap-4 sm:gap-4 max-sm:gap-4"
-        >
-          {/* Name */}
-          <div className="relative font-sans">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-md ml-0 flex flex-col lg:gap-6 md:gap-4 sm:gap-4 max-sm:gap-4"
+      >
+        {/* Name */}
+        <div className="relative font-sans">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
               border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)]
               focus:border-[#03839E] outline-none py-2"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-xs mt-1">
-                {errors.name}
-              </p>
-            )}
-          </div>
+          />
+          {errors.name && (
+            <span className="absolute text-red-500 text-xs left-0 top-full mt-1">
+              {errors.name}
+            </span>
+          )}
+        </div>
 
-          {/* Email */}
-          <div className="relative font-sans">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
+        {/* Email */}
+        <div className="relative font-sans">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
               border-b-2 placeholder:text-black border-[rgba(0,0,0,0.29)]
               focus:border-[#03839E] outline-none py-2"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-xs mt-1">
-                {errors.email}
-              </p>
-            )}
-          </div>
+          />
+          {errors.email && (
+            <span className="absolute text-red-500 text-xs left-0 top-full mt-1">
+              {errors.email}
+            </span>
+          )}
+        </div>
 
-          {/* Message */}
-          <div className="relative font-sans pb-4">
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={1}
-              className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
+        {/* Message */}
+        <div className="relative font-sans pb-4">
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+            rows={1}
+            className="md:w-[370px] sm:w-[270px] max-sm:w-[calc(100vw-68px)]
               placeholder:text-black border-b-2 border-[rgba(0,0,0,0.29)]
               focus:border-[#03839E] outline-none py-2 resize-none mb-2"
-            />
-            {errors.message && (
-              <p className="text-red-500 text-xs">
-                {errors.message}
-              </p>
-            )}
-          </div>
+          />
+          {errors.message && (
+            <span className="absolute text-red-500 text-xs left-0 top-full mt-[-1.5rem]">
+              {errors.message}
+            </span>
+          )}
+        </div>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            className="lg:w-[238px] md:w-[240px] sm:w-[240px]
+        {/* Submit */}
+        <button
+          type="submit"
+          className="lg:w-[238px] md:w-[240px] sm:w-[240px]
             max-sm:w-[calc(100vw-68px)] h-[48px]
             bg-[#03839E] hover:bg-[rgba(3,131,158,0.7)]
-            text-white font-semibold text-[14px]
-            flex items-center justify-center gap-2 transition-colors"
-          >
-            Submit <span>⟶</span>
-          </button>
-        </form>
-        {isSubmitted && (
+            text-white font-semibold text-[14px] font-sans uppercase
+            flex items-center justify-center gap-2 transition-colors cursor-pointer"
+        >
+          Submit <span>⟶</span>
+        </button>
+      </form>
+      {isSubmitted && (
         <SubmitModal close={() => setIsSubmitted(false)} />
       )}
     </>

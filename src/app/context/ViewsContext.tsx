@@ -10,7 +10,7 @@ type Cart = {
 type ViewsContextType = {
   cart: Cart;
   ordersCount: number;
-  
+
   updateCart: (items: Cart) => void;
   clearCart: () => void;
 
@@ -22,26 +22,24 @@ type ViewsContextType = {
 const ViewsContext = createContext<ViewsContextType | null>(null);
 
 export const ViewsProvider = ({ children }: { children: React.ReactNode }) => {
-  const [cart, setCart] = useState<Cart>({
-    small: 0,
-    large: 0,
+  const [cart, setCart] = useState<Cart>(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const stored = localStorage.getItem("cart");
+        if (stored) return JSON.parse(stored);
+      } catch (err) {
+        console.error("Failed to parse cart from localStorage", err);
+      }
+    }
+    return { small: 0, large: 0 };
   });
-
+  
   const [isBuyOpen, setIsBuyOpen] = useState(false);
 
 
   const ordersCount = cart.small + cart.large;
 
 
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem("cart");
-      if (stored) setCart(JSON.parse(stored));
-    } catch (err) {
-      console.error("Failed to parse cart from localStorage", err);
-    }
-  }, []);
-  
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);

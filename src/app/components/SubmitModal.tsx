@@ -21,12 +21,12 @@ const SubmitModal = ({ close }: { close: () => void }) => {
       >
         <button
           onClick={close}
-          className="absolute top-4 right-4 hover:opacity-50"
+          className="absolute top-4 right-4 hover:opacity-50 cursor-pointer text-xs text-black"
         >
           ✖
         </button>
 
-        <div className="text-center py-10">
+        <div className="text-center py-10 font-bebas leading-[150%] tracking-[0.15em]">
           <h2 className="text-2xl font-semibold mb-2">
             Message sent
           </h2>
