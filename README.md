@@ -1,3 +1,13 @@
 POTR POTS
 
-Eco-friendly e-commerce website for self-watering origami plant pots, built with Next.js, Tailwind CSS, and designed in Figma.
+Eco-Friendly Self-Watering Origami Plant Pots
+
+🚀 Project Overview
+
+Next.js E-Commerce Project featuring:
+
+Responsive Tailwind CSS UI
+
+Figma-Based Design System
+
+Clean, modern, and intuitive interface
