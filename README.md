@@ -1,13 +1,13 @@
-POTR POTS
+# 🌿 POTR POTS
 
-Eco-Friendly Self-Watering Origami Plant Pots
+**Eco-Friendly Self-Watering Origami Plant Pots**
 
-🚀 Project Overview
+---
 
-Next.js E-Commerce Project featuring:
+## 🚀 Project Overview
 
-Responsive Tailwind CSS UI
+**Next.js E-Commerce Project** featuring:  
 
-Figma-Based Design System
-
-Clean, modern, and intuitive interface
+- **Responsive Tailwind CSS UI**  
+- **Figma-Based Design System**  
+- **Clean, modern, and intuitive interface**
