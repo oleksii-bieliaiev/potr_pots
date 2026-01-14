@@ -2,7 +2,10 @@
 
 **Eco-Friendly Self-Watering Origami Plant Pots**
 
-**🔗 Demo:** [https://potr-pots-spf2.vercel.app/](https://potr-pots-spf2.vercel.app/)
+
+## 🔗 Live Demo
+Check out the live project here:  
+[🌱 Visit POTR POTS Demo](https://potr-pots-spf2.vercel.app/)  
 
 ---
 
