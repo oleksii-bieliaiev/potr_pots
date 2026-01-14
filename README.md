@@ -10,4 +10,4 @@
 
 - **Responsive Tailwind CSS UI**  
 - **Figma-Based Design System**  
-- **Clean, modern, and intuitive interface**
+- **Clean, modern, and intuitive interface**.
